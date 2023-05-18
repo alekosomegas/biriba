@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="aPane" fx:id="aPane" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.akgames.biriba.BiribaController">
+   <children>
+      <Pane id="pane2" fx:id="hbPlayerHand2" layoutX="23.0" layoutY="21.0" maxHeight="250.0" maxWidth="800.0" minHeight="200.0" minWidth="600.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="758.0" style="-fx-border-color: red;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="1.0" />
+      <Pane id="pane1" fx:id="hbPlayerHand1" layoutX="20.0" layoutY="883.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="761.0" style="-fx-border-color: red;" AnchorPane.leftAnchor="20.0" />
+      <Pane fx:id="deck" layoutX="21.0" layoutY="297.0" onMouseClicked="#onDeckClick" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: blue;">
+         <children>
+            <ImageView fx:id="ivDeck" fitHeight="200.0" fitWidth="135.0" layoutX="33.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="pDiscarded" layoutX="274.0" layoutY="294.0" onMouseClicked="#onDiscardedClick" prefHeight="415.0" prefWidth="509.0" style="-fx-border-color: yellow;" />
+      <Pane fx:id="pBiribakia" layoutX="21.0" layoutY="654.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: blue;">
+         <children>
+            <ImageView fx:id="ivBiribaki1" fitHeight="200.0" fitWidth="135.0" layoutX="33.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ivBiribaki2" fitHeight="200.0" fitWidth="135.0" layoutX="33.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" />
+         </children>
+      </Pane>
+      <Button fx:id="btnNewTriti" disable="true" layoutX="108.0" layoutY="544.0" mnemonicParsing="false" onMouseClicked="#onClickBtnTriti" text="New Triti" />
+      <Button fx:id="btnAddToTriti" disable="true" layoutX="105.0" layoutY="593.0" mnemonicParsing="false" onMouseClicked="#onClickBtnAddTriti" text="Add to Triti" />
+      <Label fx:id="lblStatus" layoutX="401.0" layoutY="765.0" text="lblStatusl" />
+      <Button fx:id="btnDiscard" disable="true" layoutX="29.0" layoutY="545.0" mnemonicParsing="false" onMouseClicked="#onClickBtnDiscard" prefHeight="81.0" prefWidth="59.0" text="Discard" />
+      <Label fx:id="lblPlayerTurn" layoutX="386.0" layoutY="244.0" text="Player 0" textFill="WHITE" />
+      <Button fx:id="btnEndTurn" disable="true" layoutX="195.0" layoutY="540.0" mnemonicParsing="false" onMouseClicked="#onClickBtnEndTurn" prefHeight="90.0" prefWidth="67.0" text="End Turn" />
+      <GridPane fx:id="pTrites1" alignment="CENTER" gridLinesVisible="true" layoutX="794.0" layoutY="574.0" prefHeight="510.0" prefWidth="794.0" style="-fx-background-color: grey;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="459.0" minHeight="10.0" prefHeight="459.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="pTrites2" alignment="CENTER" gridLinesVisible="true" layoutX="794.0" layoutY="21.0" prefHeight="510.0" prefWidth="794.0" style="-fx-background-color: grey;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="251.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="457.0" minHeight="10.0" prefHeight="455.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Button fx:id="btnUndo" disable="true" layoutX="22.0" layoutY="506.0" mnemonicParsing="false" onMouseClicked="#onClickBtnUndo" prefHeight="26.0" prefWidth="226.0" text="Undo" />
+      <Button fx:id="btnCancel" cancelButton="true" layoutX="841.0" layoutY="538.0" mnemonicParsing="false" onMouseClicked="#onCencelTritiClick" prefHeight="26.0" prefWidth="278.0" text="Cancel" visible="false" />
+      <Button fx:id="btnConfirm" defaultButton="true" layoutX="1191.0" layoutY="539.0" mnemonicParsing="false" onMouseClicked="#onConfirmTritiClick" text="Confirm" visible="false" />
+      <Button fx:id="btnStart" layoutX="248.0" layoutY="713.0" mnemonicParsing="false" onMouseClicked="#onStartClick" opacity="0.98" prefHeight="154.0" prefWidth="357.0" text="Start" />
+      <Button fx:id="btnSort2" layoutX="622.0" layoutY="232.0" mnemonicParsing="false" onMouseClicked="#onClickBtnSort" prefHeight="26.0" prefWidth="158.0" text="Sort" visible="false" />
+      <Button fx:id="btnSort1" layoutX="622.0" layoutY="841.0" mnemonicParsing="false" onMouseClicked="#onClickBtnSort" prefHeight="26.0" prefWidth="158.0" text="Sort" />
+   </children>
+</AnchorPane>
